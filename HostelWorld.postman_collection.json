@@ -1,0 +1,120 @@
+{
+	"info": {
+		"_postman_id": "a05bde9a-c2dc-480b-bff3-f13ba9aafaa2",
+		"name": "HostelWorld",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20930424"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true,
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"ibrahim@gmail.com\",\n    \"password\": 12345678\n}"
+				},
+				"url": {
+					"raw": "http://localhost/api/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Events",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true,
+					"accept": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiYjM0ZGY1YTc4MGIyOTNlOWIzYmE2YjQ1ZDAzYzgzMjljYWFkNjRhZjg0OWYzNDUzZmE1NzEzNjdkOTU0YzIwY2MwZTVjOWE1ZTlhN2VhMjgiLCJpYXQiOjE2NTMxNzk3NjYuNDE5NTI2LCJuYmYiOjE2NTMxNzk3NjYuNDE5NTI5LCJleHAiOjE2ODQ3MTU3NjYuNDE2Mjk5LCJzdWIiOiIzIiwic2NvcGVzIjpbXX0.Y-Pxb4kNIkdkIRcs9JrZ15S2iC38r9bSqZyY2gu5kAr-aDnXCsLBDQDKfHEmzmY6TUpkD1SaoZOzSpA-8c8V5D0CMzQccxsbTR-MedNNZNIaVVyX9c217CGPuEPkrikiFPc1R-4F6Ogb8XUHl_UEz1MmR3kFkTJGbxCE97dLvtAFRbTaO9jIuHnC1e2G47e9qNCSwh04pfE2M1-ZAUIZcxMX3fpKgnyCPS__6JlPtUpSizFEsuJfgTrOIoylPed_z0CjNoItIcQVw3-r7cx6Sq9CTCw0O7S7B0MXBSglmF_fnFeASY98NnYvsU_mpdRKefZtmAIHV4DPda11IBUV1aY7-tJcxMz6hAwFqU60v6SIfffA8R3Ao5ptvOoE7otcTQ8U_riLPRUSZsTu4wBqMtZd3HFss5WrvnFphNAXmqiEJ1WV4fe2rrA78IsVfJ-hibxy9E_z_pblCwMrsZ0-K5BX5xJR5GyWQp4DtMqB2Hyh-FvjtYXNvvwzpgtcmiueEkkYS_GbCpcTsh1GckiYft0UeRi2l4OiPhDrZvIkJSTpjKdMm6syXQG4atI_leF6ROtkuyKW4Es9rYZrAuWd3zfmFvlE8mlPQPbSgr5Ib9lD2i87tEuqrYfU6Djlezzri_u3rMf_MLhq-GOs1JzvexaaO5FQvkO5q7PM8evLZM8",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiYjM0ZGY1YTc4MGIyOTNlOWIzYmE2YjQ1ZDAzYzgzMjljYWFkNjRhZjg0OWYzNDUzZmE1NzEzNjdkOTU0YzIwY2MwZTVjOWE1ZTlhN2VhMjgiLCJpYXQiOjE2NTMxNzk3NjYuNDE5NTI2LCJuYmYiOjE2NTMxNzk3NjYuNDE5NTI5LCJleHAiOjE2ODQ3MTU3NjYuNDE2Mjk5LCJzdWIiOiIzIiwic2NvcGVzIjpbXX0.Y-Pxb4kNIkdkIRcs9JrZ15S2iC38r9bSqZyY2gu5kAr-aDnXCsLBDQDKfHEmzmY6TUpkD1SaoZOzSpA-8c8V5D0CMzQccxsbTR-MedNNZNIaVVyX9c217CGPuEPkrikiFPc1R-4F6Ogb8XUHl_UEz1MmR3kFkTJGbxCE97dLvtAFRbTaO9jIuHnC1e2G47e9qNCSwh04pfE2M1-ZAUIZcxMX3fpKgnyCPS__6JlPtUpSizFEsuJfgTrOIoylPed_z0CjNoItIcQVw3-r7cx6Sq9CTCw0O7S7B0MXBSglmF_fnFeASY98NnYvsU_mpdRKefZtmAIHV4DPda11IBUV1aY7-tJcxMz6hAwFqU60v6SIfffA8R3Ao5ptvOoE7otcTQ8U_riLPRUSZsTu4wBqMtZd3HFss5WrvnFphNAXmqiEJ1WV4fe2rrA78IsVfJ-hibxy9E_z_pblCwMrsZ0-K5BX5xJR5GyWQp4DtMqB2Hyh-FvjtYXNvvwzpgtcmiueEkkYS_GbCpcTsh1GckiYft0UeRi2l4OiPhDrZvIkJSTpjKdMm6syXQG4atI_leF6ROtkuyKW4Es9rYZrAuWd3zfmFvlE8mlPQPbSgr5Ib9lD2i87tEuqrYfU6Djlezzri_u3rMf_MLhq-GOs1JzvexaaO5FQvkO5q7PM8evLZM8",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"date\": \"2021-04-11\"\n    \n}"
+				},
+				"url": {
+					"raw": "http://localhost/api/event",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"event"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
